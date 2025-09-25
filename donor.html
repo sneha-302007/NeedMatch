@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NeedMatch - Donor Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="donor.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1><span style="color: white;">Need</span><span style="color:black;">Match</span></h1>
+        <nav>
+            <a href="aboutus.html">About Us</a>
+            <a href="faq.html">FAQ</a>
+        </nav>
+        <div class="filter-toggle" onclick="toggleDropdown()" id="filterToggle">▼ Show Filters</div>
+
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="filter-dropdown" id="dropdownMenu">
+            <div class="filter-section">
+                <h4>Donation Type</h4>
+                <label><input type="checkbox"> Books</label>
+                <label><input type="checkbox"> Clothes</label>
+                <label><input type="checkbox"> Grocery</label>
+                <label><input type="checkbox"> Any</label>
+            </div>
+
+            <div class="filter-section">
+                <h4>Organization Type</h4>
+                <label><input type="checkbox"> Old Age Home</label>
+                <label><input type="checkbox"> Orphanage Home</label>
+            </div>
+
+            <div class="filter-section">
+                <h4>Location</h4>
+                <label><input type="checkbox"> Dadar</label>
+                <label><input type="checkbox"> Bandra</label>
+                <label><input type="checkbox"> Andheri</label>
+                <label><input type="checkbox"> Borivali</label>
+            </div>
+
+            <div class="filter-section">
+                <h4>Nearby (km)</h4>
+                <label><input type="checkbox"> 2 km</label>
+                <label><input type="checkbox"> 5 km</label>
+                <label><input type="checkbox"> 10 km</label>
+            </div>
+
+            <div class="filter-section">
+                <h4>Urgency</h4>
+                <label><input type="checkbox"> Low</label>
+                <label><input type="checkbox"> Medium</label>
+                <label><input type="checkbox"> High</label>
+            </div>
+
+            <div class="filter-section">
+                <h4>Other</h4>
+                <label><input type="checkbox"> Urgent Needs</label>
+                <label><input type="checkbox"> Upcoming Events</label>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <!-- Filtered NGO results go here -->
+            <div id="ngo-list"></div>
+        </div>
+
+    </main>
+
+    <!-- Footer (your code) -->
+    <footer class="footer">
+        <link rel="stylesheet" href="footer.css">
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>NeedMatch</h3>
+                <p>Connecting donors with trusted NGOs across India. Transparent, impactful, and secure donations that truly matter.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="login.html">NGOs</a></li>
+                    <li><a href="donor.html">Donate Now</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>Email: support@needmatch.org</p>
+                <p>Phone: +91 98765 43210</p>
+                <p>Location: Mumbai, India</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 NeedMatch. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        function toggleDropdown() {
+            const dropdown = document.getElementById("dropdownMenu");
+            const toggle = document.getElementById("filterToggle");
+
+            dropdown.classList.toggle("show");
+            toggle.innerHTML = dropdown.classList.contains("show") ?
+                '▲ Hide Filters' :
+                '▼ Show Filters';
+        }
+
+        window.addEventListener('click', function(e) {
+            const toggle = document.getElementById("filterToggle");
+            const dropdown = document.getElementById("dropdownMenu");
+
+            if (!toggle.contains(e.target) && !dropdown.contains(e.target)) {
+                if (dropdown.classList.contains("show")) {
+                    dropdown.classList.remove("show");
+                    toggle.innerHTML = '▼ Show Filters';
+                }
+            }
+        });
+    </script>
+    <!-- Script -->
+    <script type="module" src="donor.js" defer>
+    </script>
+</body>
+
+</html>

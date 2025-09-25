@@ -1,0 +1,62 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.about-section {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 44px;
+    color: #28a745;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 30px;
+    line-height: 1.7;
+    margin-bottom: 50px;
+    padding: 0 10px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+    padding: 0 10px;
+}
+
+.feature-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #28a745;
+}
+
+.feature-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.feature-desc {
+    font-size: 20px;
+    color: #666;
+}

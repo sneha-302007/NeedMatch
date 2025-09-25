@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NGO Profile | NeedMatch</title>
+    <link rel="stylesheet" href="profile_view.css">
+
+</head>
+
+<body>
+
+    <div class="profile-container">
+        <h1>NEEDMATCH</h1>
+        <h2>Your NGO Profile</h2>
+
+        <div>
+            <div class="section-title">NGO Name:</div>
+            <div class="section-content" id="ngoName"></div>
+
+            <div class="section-title">Established Year:</div>
+            <div class="section-content" id="year"></div>
+
+            <div class="section-title">Contact:</div>
+            <div class="section-content" id="contact"></div>
+
+            <div class="section-title">Requirements / Needs:</div>
+            <div class="section-content" id="requirements"></div>
+
+            <div class="section-title">Description:</div>
+            <div class="section-content" id="description"></div>
+
+            <div class="section-title">Additional Information:</div>
+            <div class="section-content" id="additional"></div>
+
+            <div class="section-title">Uploaded Media:</div>
+            <img src="" alt="Uploaded NGO Media" class="profile-img" id="media" />
+        </div>
+
+        <div style="display: flex;">
+            <button class="edit-btn" onclick="location.href='ngoprofile.html?edit=true'">Edit Profile</button>
+            <button class="logout-btn" onclick="location.href='login.html'" id=" logoutBtn ">Logout</button>
+        </div>
+    </div>
+    <script type="module" src="profile_view.js "></script>
+
+</body>
+
+
+</html>

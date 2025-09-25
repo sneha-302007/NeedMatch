@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Set Up NGO Profile | NeedMatch</title>
+    <link rel="stylesheet" href="ngoprofile.css" />
+</head>
+
+<body>
+    <section class="form-card">
+        <img src="logo-placeholder.png" alt="Logo" class="logo" />
+        <h1><span class="green">NEED</span>MATCH</h1>
+        <p class="tagline">Genuine Needs | Smart Matches | Positive Results</p>
+
+        <h2 class="form-heading">Set Up Your NGO Profile</h2>
+
+        <form class="profile-form" id="ngoProfileForm">
+            <label>NGO Name:
+                <input type="text" name="ngo_name" id="ngoName" required />
+            </label>
+
+            <label>Established Year:
+                <input type="number" name="established_year" id="establishedYear" required />
+            </label>
+
+            <label>Contact:
+                <input type="tel" name="contact" id="contact" required />
+            </label>
+
+            <label>Requirements / Needs:
+                <textarea name="needs" id="requirements" rows="3" required></textarea>
+            </label>
+
+            <label>Description (What kind of NGO are you?):
+                <textarea name="description" id="description" rows="4" required></textarea>
+            </label>
+
+            <label>Upload Media:
+                <input type="file" name="media" id="mediaUpload" multiple />
+            </label>
+
+            <label>Additional Information (Optional):
+                <textarea name="additional_info" id="additionalInfo" rows="3"></textarea>
+            </label>
+
+            <button type="submit">Save Information</button>
+        </form>
+    </section>
+    <script type="module" src="ngoprofile.js" defer></script>
+
+</body>
+
+</html>
