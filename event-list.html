@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NeedMatch | Events</title>
+  <link rel="stylesheet" href="css/event-list.css" />
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <!-- Page Intro -->
+  <section class="event-header">
+    <h1>Donate on <span>Special Occasions</span></h1>
+    <p>Celebrate with kindness — support NGOs during meaningful festivals and events.</p>
+  </section>
+
+  <!-- Event List -->
+  <section class="event-container">
+    <div id="eventList" class="event-grid">Loading events...</div>
+  </section>
+  <div id="footer-placeholder"></div>
+
+  <script type="module" src="js/event-list.js"></script>
+  <script>
+    // 🔹 This script will load the header.html file into the div above
+    async function loadHeader() {
+      const response = await fetch("header.html");
+      const content = await response.text();
+      document.getElementById("header-placeholder").innerHTML = content;
+    }
+    loadHeader();
+    
+     // 🔹 This script will load the header.html file into the div above
+    async function loadFooter() {
+      const response = await fetch("footer.html");
+      const content = await response.text();
+      document.getElementById("footer-placeholder").innerHTML = content;
+    }
+    loadFooter();
+  </script>
+
+</body>
+</html>

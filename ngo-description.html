@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeedMatch | NGO Details</title>
+  <link rel="stylesheet" href="css/ngo-description.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div id="header-placeholder"></div>
+
+  <!-- MAIN CONTENT -->
+  <main class="ngo-desc-container">
+    
+    <!-- 🌿 Left: NGO Glass Card -->
+    <section class="ngo-glass-card">
+      <div class="glass-header">
+        <img id="ngoImage" src="event1.png" alt="NGO Image">
+        <h2 id="ngoName">Sahyadri Seva Trust</h2>
+        <p id="ngoType">Old Age Home</p>
+      </div>
+
+      <div class="glass-body">
+        <div class="glass-section about">
+          <h3>About</h3>
+          <p id="ngoDescription">
+            We provide shelter, medical support, and emotional care to elderly citizens with no family support.
+          </p>
+        </div>
+
+        <div class="glass-section needs">
+          <h3>Requirements</h3>
+          <ul id="ngoNeeds">
+            <li>Groceries</li>
+            <li>Medicines</li>
+            <li>Blankets</li>
+          </ul>
+        </div>
+
+        <div class="glass-section contact">
+          <h3>Contact Information</h3>
+          <p><strong>📍 Location:</strong> <span id="ngoAddress">Kolhapur, Maharashtra</span></p>
+          <p><strong>📞 Phone:</strong> <span id="ngoContact">+91 98970 29228</span></p>
+          <p><strong>📧 Email:</strong> <span id="ngoEmail">sahyadri@ngo.org</span></p>
+          <p><strong>📅 Established:</strong> <span id="ngoYear">2015</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 💚 Right: Donation Form -->
+    <section class="donation-form-section">
+      <h2>Send a Donation</h2>
+      <p>Fill in your details to send a donation request to this NGO.</p>
+
+      <form id="donationForm" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="donorName">Your Name</label>
+          <input type="text" id="donorName" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" placeholder="+91 98765 43210" required>
+        </div>
+
+        <div class="form-group">
+          <label for="donationType">Donation Type</label>
+          <select id="donationType" required>
+            <option value="">-- Select Donation Type --</option>
+            <option value="Clothes">Clothes</option>
+            <option value="Books">Books</option>
+            <option value="Groceries">Groceries</option>
+            <option value="Money">Money</option>
+            <option value="Others">Others</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="donationPhoto">Upload Donation Photo</label>
+          <input type="file" id="donationPhoto" accept="image/*">
+        </div>
+
+        <div class="form-group">
+          <label for="address">Address</label>
+          <textarea id="address" rows="3" placeholder="Enter your address" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message (Optional)</label>
+          <textarea id="message" rows="3" placeholder="Write a short message for the NGO"></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="submit-btn">Submit Donation</button>
+        </div>
+
+        <p id="formStatus"></p>
+      </form>
+      <a href="donor-dashboard.html" class="back-btn">← Back to Dashboard</a>
+
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Header & Footer Loader -->
+  <script>
+    async function loadHeader() {
+      const res = await fetch("header.html");
+      document.getElementById("header-placeholder").innerHTML = await res.text();
+    }
+    async function loadFooter() {
+      const res = await fetch("footer.html");
+      document.getElementById("footer-placeholder").innerHTML = await res.text();
+    }
+    loadHeader();
+    loadFooter();
+  </script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const stored = localStorage.getItem("selectedNGO");
+
+  if (!stored) {
+    document.querySelector(".ngo-glass-card").innerHTML = "<p>No NGO selected. Please go back.</p>";
+    return;
+  }
+
+  const ngo = JSON.parse(stored);
+
+  // Fill NGO Details
+  document.getElementById("ngoName").textContent = ngo.name || "Unnamed NGO";
+  document.getElementById("ngoType").textContent = ngo.type || "—";
+  document.getElementById("ngoDescription").textContent = ngo.description || "No description available.";
+  document.getElementById("ngoAddress").textContent = ngo.address || "—";
+  document.getElementById("ngoContact").textContent = ngo.contact || "—";
+  document.getElementById("ngoEmail").textContent = ngo.email || "—";
+  document.getElementById("ngoYear").textContent = ngo.establishedYear || "—";
+
+  // NGO Needs
+  const needsContainer = document.getElementById("ngoNeeds");
+  needsContainer.innerHTML = "";
+  if (Array.isArray(ngo.needs)) {
+    ngo.needs.forEach(need => {
+      const li = document.createElement("li");
+      li.textContent = need;
+      needsContainer.appendChild(li);
+    });
+  } else if (ngo.needs) {
+    const li = document.createElement("li");
+    li.textContent = ngo.needs;
+    needsContainer.appendChild(li);
+  }
+
+  // NGO Image
+  const imageEl = document.getElementById("ngoImage");
+  imageEl.src = ngo.image || "photos/ngo-placeholder.jpg";
+});
+</script>
+<script type="module" src="js/donation-form.js" defer></script>
+
+  <!-- JS will be added later for Firebase -->
+</body>
+</html>

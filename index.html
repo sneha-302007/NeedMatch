@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeedMatch -Homepage</title>
+
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+    
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 20px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #000;
+        }
+        
+        main p {
+            font-size: 45px;
+            font-weight: bold;
+            text-align: center;
+            padding: 40px;
+        }
+    </style>
+</head>
+
+<body>
+ <div id="header-placeholder"></div>
+
+    <section class="hero">
+        <link rel="stylesheet" href="css/intro.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+        <div class="hero-container">
+            <div class="hero-text">
+                <h1>NeedMatch</h1>
+                <h2 class="project-name">A platform that connects, gives and makes an impact</h2>
+            </div>
+
+            <div class="slider-container">
+                <img src="photos/intro.png" class="slider-img active" alt="Slide 1">
+                <img src="photos/image1.jpg" class="slider-img" alt="Slide 2">
+                <img src="photos/image2.jpg" class="slider-img" alt="Slide 3">
+                <img src="photos/image3.jpg" class="slider-img" alt="Slide 4">
+
+                <button class="slider-btn prev">&#10094;</button>
+                <button class="slider-btn next">&#10095;</button>
+
+            </div>
+            <script src="js/slider.js "></script>
+
+        </div>
+
+        <div class="feature-strip ">
+            <div class="feature highlight-feature ">
+                <B> Donate with 0%<sup>*</sup> Platform Fee</B>
+            </div>
+            <div class="feature ">
+                <img src="photos/icon1.png " alt="Connect Icon ">
+                <p>
+                    <B>Connect with Verified NGOs </B>
+                </p>
+            </div>
+            <div class="feature ">
+                <img src="photos/icon2.png " alt="Transparency Icon ">
+                <p>
+                    <B>Donate with Transparency</B>
+                </p>
+            </div>
+            <div class="feature ">
+                <img src="photos/icon3.png " alt="Track Icon ">
+                <p>
+                    <B>Track Your Impact</B>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <br>
+    <br>
+    <br>
+    <section>
+        <title>How It Works</title>
+        <h2>
+            <u>
+              How It Works?
+            </u>
+        </h2>
+        <link rel="stylesheet " href="css/style_tabs.css ">
+        <div class="tabs ">
+            <span class="tab active " onclick="showSteps( 'donor') ">For Donors</span>
+            <span class="tab " onclick="showSteps( 'ngo') ">For NGOs</span>
+        </div>
+
+
+        <!-- Donor Steps -->
+        <div id="donorSteps" class="step-container ">
+            <div class="step">
+                <img src="photos/filters.png" alt="Select what to donate ">
+                <h4>APPLY FILTERS</h4>
+                <p>Select products you want to donate and apply other required filters.</p>
+            </div>
+            <div class="arrow">➔</div>
+            <div class="step">
+                <img src="photos/select.png" alt="Choose a NGO ">
+                <h4>CHOOSE A NGO</h4>
+                <p>Browse different NGOs/ TRUSTs and select one to DONATE.</p>
+            </div>
+            <div class="arrow">➔</div>
+            <div class="step">
+                <img src="photos/check.png" alt="Check the Info ">
+                <h4>CHECK INFORMATION</h4>
+                <p>Check the informations/history/needs of NGO.</p>
+            </div>
+            <div class="arrow">➔</div>
+            <div class="step">
+                <img src="photos/fill.png" alt="Fill the form ">
+                <h4>FILL UP THE FORM</h4>
+                <p>Checkout and fill the information asked in form and submit it.</p>
+            </div>
+            <div class="arrow">➔</div>
+            <div class="step">
+                <img src="photos/deliver.png " alt="Delivery of products ">
+                <h4>DELIVERY OF PRODUCTS</h4>
+                <p>Get a secret code from NGO through mail and handover the products to pickup person.</p>
+            </div>
+            <div class="arrow">➔</div>
+            <div class="step">
+                <img src="photos/thankyou.png " alt="Thankyou report ">
+                <h4>THANKYOU REPORT</h4>
+                <p>Receive a thankyou report from NGO.</p>
+            </div>
+
+        </div>
+
+        <!-- NGO Steps -->
+        <div id="ngoSteps" class="step-container" style="display: none; ">
+            <div class="step">
+                <img src="photos/Login.png" alt="Login/Signup ">
+                <h4>SIGNUP/ LOGIN</h4>
+                <p>Signup with a username and create a password.</p>
+            </div>
+            <div class="arrow">➔</div>
+            <div class="step">
+                <img src="photos/Profile.png" alt="Register ">
+                <h4>CREATE PROFILE</h4>
+                <p>Setup your NGOs profile by uploading all information and multimedia.</p>
+            </div>
+            <div class="arrow">➔</div>
+            <div class="step">
+                <img src="photos/List needs.png" alt="List Needs ">
+                <h4>LIST NEEDS</h4>
+                <p>List required products with quantity and urgency.</p>
+            </div>
+            <div class="arrow">➔</div>
+            <div class="step">
+                <img src="photos/donor.png" alt="Get donors ">
+                <h4>KNOW DONORS</h4>
+                <p>Check the information of donors through mail and type of donation.</p>
+            </div>
+            <div class="arrow">➔</div>
+            <div class="step">
+                <img src="photos/recieve.png" alt="Receive Products ">
+                <h4>RECEIVE PRODUCTS</h4>
+                <p>Generate a secret code and pick up the donated products.</p>
+            </div>
+            <div class="arrow">➔</div>
+            <div class="step">
+                <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Send Report ">
+                <h4>SEND REPORT</h4>
+                <p>Send updates and thank-you reports to donors.</p>
+            </div><br>
+
+        </div>
+        <div class="action-buttons">
+            <button onclick="location.href='donor-dashboard.html'" id="donorBtn" class="center-button">Donate Now</button>
+            <button onclick="location.href='login.html'" id="ngoBtn" class="center-button" style="display: none;">Login Now</button>
+
+
+        </div>
+        <script src="js/script_tabs.js "></script>
+
+    </section>
+    <br>
+    <br>
+  
+    <section class="events">
+  <link rel="stylesheet" href="css/events.css">
+  <h2><u>Upcoming Events</u></h2>
+
+  <div class="event-cards">
+    <!-- Event 1 -->
+    <div class="event-card">
+      <img src="photos/event1.png" alt="Elder's Day">
+      <div class="event-info">
+        <h3>Older’s Day - Jogeshwari</h3>
+        <p class="event-date">01 Oct 2025</p>
+        <p class="event-desc">Celebrate and honor our elders with love and care.</p>
+      </div>
+    </div>
+
+    <!-- Event 2 -->
+    <div class="event-card">
+      <img src="photos/event2.png" alt="Children's Day">
+      <div class="event-info">
+        <h3>Children’s Day - Kandivali</h3>
+        <p class="event-date">14 Nov 2025</p>
+        <p class="event-desc">Spread smiles and joy among little ones at the orphanage.</p>
+      </div>
+    </div>
+
+    <!-- Event 3 -->
+    <div class="event-card">
+      <img src="photos/event3.png" alt="Diwali Celebration">
+      <div class="event-info">
+        <h3>Diwali Celebration</h3>
+        <p class="event-date">20 Oct 2025</p>
+        <p class="event-desc">Light up lives with joy, sweets and donations this Diwali.</p>
+      </div>
+    </div>
+
+    <!-- Event 4 -->
+    <div class="event-card">
+      <img src="photos/event4.png" alt="Holi Celebration">
+      <div class="event-info">
+        <h3>Holi Celebration</h3>
+        <p class="event-date">06 Mar 2025</p>
+        <p class="event-desc">Celebrate the festival of colors with love and laughter.</p>
+        
+      </div>
+    </div>
+
+    <!-- Event 5 -->
+    <div class="event-card">
+      <img src="photos/event5.png" alt="Birthday Celebrations">
+      <div class="event-info">
+        <h3>Birthday Celebrations</h3>
+        <p class="event-date">Every Month</p>
+        <p class="event-desc">Donors celebrate birthdays with children and elders.</p>
+       
+      </div>
+    </div>
+
+    <!-- Event 6 -->
+    <div class="event-card">
+      <img src="photos/event6.png" alt="World Kindness Day">
+      <div class="event-info">
+        <h3>World Kindness Day</h3>
+        <p class="event-date">13 Nov 2025</p>
+        <p class="event-desc">A day to spread kindness and joy in orphanages & homes.</p>
+      </div>
+    </div>
+  </div>
+  <button class="join-btn" onclick="window.location.href='special-ocassion.html'">Join Us</button>
+</section>
+
+
+    <br>
+    <br>
+    <br>
+
+     
+    <section class="about-section">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+        <link rel="stylesheet" href="css/fetures.css">
+        <h2>
+            <U>A Platform You Can Believe In</U>
+        </h2>
+        <p>
+            <strong>NeedMatch</strong> is your trusted bridge between donors and verified NGOs. We simplify the donation process, connect causes with care, and ensure that every contribution reaches those who truly need it — transparently and securely.
+        </p>
+
+        <div class=" features ">
+            <div class="feature-card ">
+                <div class="feature-icon "><i class="fas fa-hand-holding-heart "></i></div>
+                <div class="feature-title ">Trusted Donations</div>
+                <div class="feature-desc ">Every donation is verified and acknowledged by the NGOs themselves.</div>
+            </div>
+
+            <div class="feature-card ">
+                <div class="feature-icon "><i class="fas fa-building "></i></div>
+                <div class="feature-title ">Verified NGOs</div>
+                <div class="feature-desc ">We list only credible orphanages and old age homes with complete profiles.</div>
+            </div>
+
+            <div class="feature-card ">
+                <div class="feature-icon "><i class="fas fa-map-marker-alt "></i></div>
+                <div class="feature-title ">Smart Filters</div>
+                <div class="feature-desc ">Easily search NGOs by location, need type, urgency, and proximity.</div>
+            </div>
+
+            <div class="feature-card ">
+                <div class="feature-icon "><i class="fas fa-user-check "></i></div>
+                <div class="feature-title ">No Login for Donors</div>
+                <div class="feature-desc ">Start browsing and helping instantly, no login required.</div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    
+    <div id="footer-placeholder"></div>
+
+     <script>
+    // 🔹 This script will load the header.html file into the div above
+    async function loadHeader() {
+      const response = await fetch("./header.html");
+      const content = await response.text();
+      document.getElementById("header-placeholder").innerHTML = content;
+    }
+     loadHeader();
+     // 🔹 This script will load the header.html file into the div above
+    async function loadFooter() {
+      const response = await fetch("./footer.html");
+      const content = await response.text();
+      document.getElementById("footer-placeholder").innerHTML = content;
+    }
+    loadFooter();
+
+
+   
+  </script>
+
+</body>
+
+</html>

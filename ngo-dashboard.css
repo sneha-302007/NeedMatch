@@ -1,0 +1,269 @@
+body { 
+  margin: 0; 
+  font-family:'Poppins', sans-serif; 
+  background-color: #f5f8f5; 
+  color: #222; line-height: 1.5; 
+} 
+/* Navbar */ 
+.navbar { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  background-color: #14843c; 
+  color: #fff; 
+  padding: 15px 40px; 
+} 
+.logo { 
+  font-size: 28px; 
+  font-weight: 700; 
+} 
+.logo span { 
+  color: #fff; 
+  font-weight: 600; 
+} 
+.navbar ul { 
+  list-style: none; 
+  display: flex; 
+  gap: 20px; 
+} 
+.navbar ul li a { 
+  color: #fff; 
+  text-decoration: none; 
+  font-weight: 500; 
+} 
+/* Dashboard Layout */ 
+.dashboard-container { 
+  display: grid; 
+  grid-template-columns: 0.9fr 1.6fr; 
+  /* wider donation section */ 
+  gap: 50px; 
+  padding: 40px 60px; 
+} 
+/* NGO Info Section */ 
+.ngo-info { 
+  flex: 1; 
+  padding: 20px 40px; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: flex-start; 
+  justify-content: flex-start; 
+  background-color: #fff; 
+  border-radius: 12px; 
+} 
+.ngo-card h3 { 
+  color: #14843c;
+  font-size: 26px; 
+  margin-bottom: 10px; 
+}
+.ngo-info ul { 
+  margin: 10px 0; 
+  padding-left: 18px; 
+} 
+/* Reduce the large gaps between items */ 
+.ngo-card h3, 
+.ngo-card p, 
+.ngo-card h4,
+.ngo-card ul { 
+  margin-bottom: 8px;
+  margin-top: 0; 
+} 
+.ngo-card ul { 
+  margin-left: 20px; 
+} 
+/* --- Dashboard Layout --- */
+.dashboard-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px 60px;
+}
+
+/* Left side: NGO Info */
+.ngo-info {
+  flex: 1;
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  padding-bottom: 30px;
+}
+
+/* Right side: both tables stacked */
+.right-panel {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Common Donation Card Style */
+.donation-section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.donation-section h2 {
+  margin-bottom: 18px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #14843c;
+}
+
+/* Normal Table */
+#donationTable {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+#donationTable th {
+  background-color: #28a745;
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+#donationTable td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Special Occasion Table */
+.special-donations {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.special-donations h2 {
+  color: #0d6efd;
+  margin-bottom: 18px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+#specialDonationTable {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+#specialDonationTable th {
+  background-color: #0d6efd;
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+#specialDonationTable td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #eee;
+}
+
+
+/* Button container — force horizontal alignment */
+.button-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+  width: 100%;
+}
+
+/* Common button styles */
+.edit-btn,
+.event-btn {
+  background-color: #14843c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s ease;
+  flex: 1; /* makes both buttons equal width */
+  text-align: center;
+  white-space: nowrap; /* prevents line break */
+}
+
+/* Event button color */
+.event-btn {
+  background-color: #0d6efd;
+}
+
+/* Hover effects */
+.edit-btn:hover {
+  background-color: #0f6c31;
+  transform: scale(1.03);
+}
+
+.event-btn:hover {
+  background-color: #0b5ed7;
+  transform: scale(1.03);
+}
+
+
+/* Status Dropdown */
+.status-dropdown {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.status-dropdown:hover {
+  border-color: #28a745;
+  box-shadow: 0 0 4px rgba(40, 167, 69, 0.3);
+}
+
+/* Ensure NGO card displays all buttons properly */
+.ngo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding-bottom: 15px;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px; /* bigger icon */
+  color: #d9534f; /* red for danger */
+  transition: transform 0.2s;
+}
+
+.delete-btn:hover {
+  transform: scale(1.2);
+}
+.special-status-dropdown {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.special-status-dropdown:hover {
+  border-color: #28a745;
+  box-shadow: 0 0 4px rgba(40, 167, 69, 0.3);
+}

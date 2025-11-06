@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeedMatch | Donate on Special Occasion</title>
+  <link rel="stylesheet" href="css/special-ocassion.css">
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <main class="event-container">
+    <h1>🎉 Donate on Special Occasion</h1>
+    <p class="subtitle">Select an event below to make your donations more meaningful.</p>
+
+    <div id="eventList" class="event-grid">
+      <p>Loading events...</p>
+    </div>
+  </main>
+<div id="footer-placeholder"></div>
+ 
+  <script>
+    // Load common header
+    async function loadHeader() {
+      const res = await fetch("header.html");
+      const content = await res.text();
+      document.getElementById("header-placeholder").innerHTML = content;
+    }
+    loadHeader();
+     async function loadFooter() {
+      const res = await fetch("footer.html");
+      const content = await res.text();
+      document.getElementById("footer-placeholder").innerHTML = content;
+    }
+    loadFooter();
+    
+  </script>
+
+  <script type="module" src="js/special-ocassion.js"></script>
+</body>
+</html>

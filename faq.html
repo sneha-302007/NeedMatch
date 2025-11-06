@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ | NeedMatch</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #ffffff;
+            color: #2e2e2e;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .heading {
+            background-color: #ffffff;
+            color: #28a745;
+            padding: 20px 40px;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #f4fdf8;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 32px;
+        }
+        
+        .faq {
+            margin-bottom: 25px;
+        }
+        
+        .faq h3 {
+            color: #28a745;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .faq p {
+            font-size: 17px;
+            line-height: 1.6;
+        }
+        
+        footer {
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+        
+        a.back-link {
+            text-decoration: none;
+            color: #28a745;
+            font-weight: bold;
+        }
+        
+        a.back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+    <div class="heading">
+        <h1>Frequently Asked Questions</h1>
+    </div>
+    <div class="container">
+        <div class="faq">
+            <h3>1. Is there any platform fee?</h3>
+            <p>No. NeedMatch does not charge any platform fee. 100% of your donation goes to the NGO.</p>
+        </div>
+
+        <div class="faq">
+            <h3>2. How are NGOs verified?</h3>
+            <p>All listed NGOs undergo a strict verification process including document checks and activity validation.</p>
+        </div>
+
+        <div class="faq">
+            <h3>3. Do I need to create an account to donate?</h3>
+            <p>No registration is required to donate. You can simply choose a cause and contribute.</p>
+        </div>
+
+        <div class="faq">
+            <h3>4. Can I track my donation?</h3>
+            <p>Yes. NGOs send a detailed Thank You report after receiving your donation.</p>
+        </div>
+
+        <a href="homepage.html" class="back-link">← Back to Home</a>
+
+    </div>
+
+
+    
+   <div id="footer-placeholder"></div>
+</body>
+<script>// 🔹 This script will load the header.html file into the div above
+    async function loadHeader() {
+      const response = await fetch("header.html");
+      const content = await response.text();
+      document.getElementById("header-placeholder").innerHTML = content;
+    }
+     loadHeader();
+     // 🔹 This script will load the header.html file into the div above
+    async function loadFooter() {
+      const response = await fetch("footer.html");
+      const content = await response.text();
+      document.getElementById("footer-placeholder").innerHTML = content;
+    }
+    loadFooter();
+    </script>
+
+</html>

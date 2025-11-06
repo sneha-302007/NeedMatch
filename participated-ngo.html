@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Participating NGOs | NeedMatch</title>
+  <link rel="stylesheet" href="css/event-ngos.css">
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <main class="ngo-container">
+    <div id="ngoList"></div>
+    
+
+<div id="donationFormContainer" class="form-popup hidden">
+  <div class="form-box">
+    <h2>Donate Now</h2>
+    <form id="donationForm">
+      <label for="donorName">Name</label>
+      <input type="text" id="donorName" placeholder="Your Name" required />
+
+      <label for="donorEmail">Email</label>
+      <input type="email" id="donorEmail" placeholder="Your Email" required />
+
+      <label for="donorPhone">Phone</label>
+      <input type="tel" id="donorPhone" placeholder="Your Phone Number" required />
+
+      <label for="donationType">Donation Type</label>
+      <select id="donationType" required>
+        <option value="">Select Type</option>
+        <option value="Clothes">Clothes</option>
+        <option value="Food">Food</option>
+        <option value="Money">Money</option>
+      </select>
+
+      <label for="donorMessage">Message</label>
+      <textarea id="donorMessage" placeholder="Message (optional)"></textarea>
+
+      <button type="submit" class="submit-btn">Donate</button>
+    </form>
+    <button id="closeForm" class="close-btn">Close</button>
+  </div>
+</div>
+
+
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    // Load common header
+    async function loadHeader() {
+      const res = await fetch("header.html");
+      const content = await res.text();
+      document.getElementById("header-placeholder").innerHTML = content;
+    }
+    loadHeader();
+    async function loadFooter() {
+      const res = await fetch("footer.html");
+      const content = await res.text();
+      document.getElementById("footer-placeholder").innerHTML = content;
+    }
+    loadFooter();
+
+  </script>
+
+  <script type="module" src="js/event-ngos.js" defer></script>
+</body>
+</html>

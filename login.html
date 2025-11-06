@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NeedMatch - Login</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script type="module" src="js/login.js" defer></script>
+    <style>
+        .toggle-password {
+            cursor: pointer;
+            margin-left: -30px;
+            user-select: none;
+        }
+        
+        #login-message {
+            margin-top: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <img src="photos/logo.jpg" alt="NeedMatch Logo" class="logo">
+        <h1 class="brand-name"><span class="green-text">NEED</span>MATCH</h1>
+
+        <div class="nav-links">
+            <a href="#">Genuine Needs</a> |
+            <a href="#">Smart Matches</a> |
+            <a href="#">Positive Results</a>
+        </div>
+
+        <br>
+        <p class="quick-login-text">Quickly login using</p>
+        <div class="social-buttons">
+            <button class="google-btn">Google</button>
+            <button class="facebook-btn">Facebook</button>
+        </div>
+
+        <div class="divider"><span>or</span></div>
+
+        <!-- ✅ Login Form -->
+        <form class="login-form" id="login-form">
+            <div class="input-group">
+                <input type="text" placeholder="Email ID" id="email" required>
+            </div>
+
+            <div class="input-group">
+                <input type="password" placeholder="Password" id="password" required>
+                <span class="toggle-password" id="togglePassword">👁️</span>
+            </div>
+
+            <a href="#" class="reset-password">Reset Password</a>
+
+            <p class="terms">
+                By continuing, I agree to the <a href="#">Terms of Use</a>, <a href="#">Privacy Policy</a> and receiving SMS and WhatsApp communication.
+            </p>
+
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+
+        <div id="login-message"></div>
+
+        <p class="register-link">
+            New to NeedMatch? <a href="signup.html">SignUp now</a>
+        </p>
+    </div>
+</body>
+
+</html>

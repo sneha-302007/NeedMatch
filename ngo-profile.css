@@ -1,0 +1,145 @@
+/* 🌿 Page Setup */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #d8f5d8, #e8f6fc);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🌿 Header */
+.topbar {
+  background: #2e8b57;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.topbar span {
+  color: #bdf3c8;
+}
+
+/* 🌿 Main Grid */
+.profile-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px 60px;
+  box-sizing: border-box;
+}
+
+/* 🌿 Cards */
+.card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.card h2 {
+  color: #2e8b57;
+  margin-bottom: 20px;
+  font-size: 20px;
+  border-bottom: 2px solid #2e8b57;
+  padding-bottom: 5px;
+}
+
+/* 🌿 Inputs and Labels */
+label {
+  display: block;
+  font-weight: 500;
+  color: #333;
+  margin-top: 12px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #2e8b57;
+  outline: none;
+}
+
+/* 🌿 Checkbox Group */
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.checkbox-group label {
+  background: #eefaf1;
+  border: 1px solid #cde9d6;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.checkbox-group label:hover {
+  background: #d8f5e0;
+}
+
+/* 🌿 File Preview */
+#previewContainer {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+#previewContainer img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #cde9d6;
+}
+
+/* 🌿 Button */
+button {
+  background-color: #2e8b57;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #256f45;
+}
+
+/* 🌿 Responsive */
+@media (max-width: 900px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+}

@@ -1,0 +1,93 @@
+<!-- 🌿 NeedMatch Header (Reusable Everywhere) -->
+<style>
+  /* 🌿 Header Styles */
+  header {
+    background-color: #28a745;
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .logo img {
+    height: 70px;
+    width: auto;
+  }
+
+  .logo h1 {
+    font-size: 45px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .logo span:first-child {
+    color: white;
+  }
+
+  .logo span:last-child {
+    color: black;
+  }
+
+  nav {
+    display: flex;
+    gap: 25px;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover {
+    color: black;
+  }
+
+  /* 🌿 Responsive adjustments */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      text-align: center;
+      gap: 15px;
+    }
+
+    .logo h1 {
+      font-size: 35px;
+    }
+
+    .logo img {
+      height: 60px;
+    }
+
+    nav {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+</style>
+
+<header>
+  <div class="logo">
+    <img src="photos/logo2.jpg" alt="NeedMatch logo">
+    <h1><span>Need</span><span>Match</span></h1>
+  </div>
+
+  <nav>
+    <a href="homepage.html">Home</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="donor-dashboard.html">donor-dashboard</a>
+  </nav>
+</header>

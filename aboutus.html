@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - NeedMatch</title>
+    <link rel="stylesheet" href="css/aboutus.css">
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+    <main class="container">
+        <section class="intro card">
+            <h2>About NeedMatch</h2>
+            <p><strong>NeedMatch</strong> is a transparent and trusted donation platform that connects donors with verified NGOs, orphanages, and old age homes across India. Our goal is to simplify the donation process while ensuring every contribution reaches
+                the people who need it most.</p>
+            <p>Whether you’re donating food, clothes, or daily essentials, NeedMatch ensures your donation is delivered securely and efficiently. We charge 0% platform fee, so your generosity makes the biggest impact possible.</p>
+            <p>We believe every act of kindness matters, and we're here to help you make it count.</p>
+        </section>
+
+        <section class="mission card">
+            <h2>Our Mission</h2>
+            <p>NeedMatch bridges the gap between donors and NGOs running orphanages and old age homes. We make sure donations are delivered transparently, efficiently, and meaningfully to bring real impact where it’s needed most.</p>
+        </section>
+
+        <section class="how-it-works card">
+            <h2>How NeedMatch Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <h3>1. NGO Registration</h3>
+                    <p>NGOs create profiles by entering their name, location, mission, multimedia, and needs.</p>
+                </div>
+                <div class="step">
+                    <h3>2. Find & Filter</h3>
+                    <p>Donors search NGOs using filters like type (old age home/orphanage), what to donate, and location—no login needed.</p>
+                </div>
+                <div class="step">
+                    <h3>3. Connect & Donate</h3>
+                    <p>Donors fill a form; NGOs receive it, confirm the donation, and send a receipt with a unique donation ID.</p>
+                </div>
+                <div class="step">
+                    <h3>4. Secure Follow-up</h3>
+                    <p>After donation, donors get thank you messages, photos, and future updates on urgent needs.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="impact card">
+            <h2>Making Every Act of Kindness Count</h2>
+            <p>Every donation tells a story. NeedMatch makes sure your kindness reaches those who need it most, safely and transparently.</p>
+        </section>
+
+        <a href="homepage.html" class="back-link">← Back to Home</a>
+    </main>
+
+    <div id="footer-placeholder"></div>
+<script>
+    // 🔹 This script will load the header.html file into the div above
+    async function loadHeader() {
+      const response = await fetch("header.html");
+      const content = await response.text();
+      document.getElementById("header-placeholder").innerHTML = content;
+    }
+     loadHeader();
+     // 🔹 This script will load the header.html file into the div above
+    async function loadFooter() {
+      const response = await fetch("footer.html");
+      const content = await response.text();
+      document.getElementById("footer-placeholder").innerHTML = content;
+    }
+    loadFooter();
+</script>
+        
+</body>
+
+</html>

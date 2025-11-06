@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeedMatch - Donor Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/donor-dashboard.css">
+    <!-- Optional: Tailwind CSS for quick styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 font-poppins">
+
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content -->
+    <main class="flex gap-6 p-4">
+
+        <!-- Left Sidebar Filters -->
+        <aside class="w-72 bg-white p-4 rounded shadow-md sticky top-4 h-fit">
+            <h2 class="text-xl font-semibold mb-4">Filters</h2>
+
+            <!-- Organization Type -->
+            <div class="mb-4">
+                <h4 class="font-medium mb-2">Organization Type</h4>
+                <label class="block"><input type="checkbox" class="org-type" value="Old Age Home"> Old Age Home</label>
+                <label class="block"><input type="checkbox" class="org-type" value="Orphanage Home"> Orphanage Home</label>
+                <label class="block"><input type="checkbox" class="org-type" value="Home for Special People"> Home for Special People</label>
+            </div>
+
+            <!-- Donation Type -->
+            <div class="mb-4">
+                <h4 class="font-medium mb-2">Donation Type</h4>
+                <label class="block"><input type="checkbox" class="donation-type" value="Clothes"> Clothes</label>
+                <label class="block"><input type="checkbox" class="donation-type" value="Books"> Books</label>
+                <label class="block"><input type="checkbox" class="donation-type" value="Groceries"> Groceries</label>
+            </div>
+
+            <!-- Location -->
+            <div class="mb-4">
+                <h4 class="font-medium mb-2">Location (Ward)</h4>
+                <label class="block"><input type="checkbox" class="location" value="KP East"> KP East</label>
+                <label class="block"><input type="checkbox" class="location" value="KP West"> KP West</label>
+                <label class="block"><input type="checkbox" class="location" value="Andheri"> Andheri</label>
+                <label class="block"><input type="checkbox" class="location" value="Bandra"> Bandra</label>
+            </div>
+
+            <!-- Urgency -->
+            <div class="mb-4">
+                <h4 class="font-medium mb-2">Urgency</h4>
+                <label class="block"><input type="checkbox" class="urgency" value="Low"> Low</label>
+                <label class="block"><input type="checkbox" class="urgency" value="Medium"> Medium</label>
+                <label class="block"><input type="checkbox" class="urgency" value="High"> High</label>
+            </div>
+
+            <!-- Apply Filters Button -->
+            <button id="applyFilters" class="w-full bg-green-600 text-white py-2 rounded mt-2 hover:bg-green-700 transition">
+                Apply Filters
+            </button>
+        </aside>
+
+        <!-- Right Side: NGO Cards -->
+        <section class="flex-1 flex flex-col gap-6" id="ngo-list">
+
+            <!-- NGO cards will be dynamically loaded here -->
+        </section>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Load JS -->
+    <script type="module" src="js/donor-dashboard.js" defer></script>
+
+    <script>
+        // Load header and footer dynamically
+        async function loadHeader() {
+            const res = await fetch("header.html");
+            document.getElementById("header-placeholder").innerHTML = await res.text();
+        }
+        async function loadFooter() {
+            const res = await fetch("footer.html");
+            document.getElementById("footer-placeholder").innerHTML = await res.text();
+        }
+        loadHeader();
+        loadFooter();
+    </script>
+</body>
+
+</html>

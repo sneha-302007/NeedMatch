@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeedMatch | NGO Dashboard</title>
+    <link rel="stylesheet" href="css/ngo-dashboard.css">
+    <!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  (function () {
+    emailjs.init("8Xom5zm-7kCW6LhvW"); // your public key
+  })();
+</script>
+
+</head>
+<body>
+  <main>
+     <div id="header-placeholder"></div>
+    <!-- Dashboard Main Section -->
+    <div class="dashboard-container">
+        <!-- Left Side: NGO Info -->
+        <section class="ngo-info">
+            <h2>NGO Information</h2>
+            <div class="ngo-card">
+                <h3 id="ngoName">Sunrise Orphanage</h3>
+                <p><strong>Type:</strong> Orphanage</p>
+                <p><strong>Location:</strong> Pune, Maharashtra</p>
+                <p><strong>Email:</strong> sunrise@ngo.org</p>
+                <p><strong>Contact:</strong> +91 98765 43210</p>
+                <h4>Needs:</h4>
+                <ul>
+                    <li>School Supplies</li>
+                    <li>Clothing for children (ages 5–14)</li>
+                    <li>Monthly groceries</li>
+                </ul>
+               <div class="button-group">
+    <button class="edit-btn" onclick="window.location.href='edit_profile.html'">Edit Info</button>
+    <button class="event-btn" onclick="window.location.href='event-list.html'">Receive Donations on Special Occasion</button>
+  </div>
+            </div>
+        </section>
+<div class="right-panel">
+
+  <!-- 🔸 Normal Donations -->
+  <section class="donation-section">
+    <h2>Donation Requests</h2>
+    <table id="donationTable">
+      <thead>
+        <tr>
+          <th>Donor Name</th>
+          <th>Type</th>
+          <th>Message</th>
+          <th>Contact</th>
+          <th>DID</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="donationBody">
+        <tr><td colspan="6">Loading donations…</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 🟢 Special Occasion Donations -->
+  <section class="donation-section special-donations">
+    <h2>Special Occasion Donation Requests</h2>
+    <table id="specialDonationTable">
+      <thead>
+        <tr>
+          <th>Event</th>
+          <th>Donor Name</th>
+          <th>Type</th>
+          <th>Message</th>
+          <th>Contact</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="specialDonationBody">
+        <tr><td colspan="7">Loading special occasion donations…</td></tr>
+      </tbody>
+    </table>
+  </section>
+  
+</div> <!-- end of right-panel -->
+      </main>
+<div id="footer-placeholder"></div>
+        
+
+      
+      <script>
+    // 🔹 This script will load the header.html file into the div above
+    async function loadHeader() {
+      const response = await fetch("header.html");
+      const content = await response.text();
+      document.getElementById("header-placeholder").innerHTML = content;
+    }
+    loadHeader();
+     // 🔹 This script will load the header.html file into the div above
+    async function loadFooter() {
+      const response = await fetch("footer.html");
+      const content = await response.text();
+      document.getElementById("footer-placeholder").innerHTML = content;
+    }
+    loadFooter();
+  </script>
+
+  <script type="module" src="js/ngo-dashboard.js" defer></script>
+  <script type="module" src="js/email-service.js" defer></script>
+
+</body>
+</html>

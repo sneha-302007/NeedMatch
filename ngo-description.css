@@ -1,0 +1,265 @@
+/* 🌿 Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #e8f5e9, #ffffff);
+  color: #222;
+  min-height: 100vh;
+}
+
+/* ---------- MAIN GRID LAYOUT ---------- */
+.ngo-desc-container {
+  display: grid;
+  grid-template-columns: 50% 45%;
+  gap: 40px;
+  padding: 60px 80px;
+  align-items: start;
+}
+
+/* ---------- GLASS CARD (LEFT SIDE) ---------- */
+.ngo-glass-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  padding: 30px 25px;
+  color: #1b1b1b;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeSlideIn 0.8s ease forwards;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ngo-glass-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Section */
+.glass-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.glass-header img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #28a745;
+  box-shadow: 0 0 10px rgba(40, 167, 69, 0.4);
+}
+
+.glass-header h2 {
+  font-size: 24px;
+  color: #28a745;
+  margin: 10px 0 4px;
+}
+
+.glass-header p {
+  font-size: 15px;
+  color: #333;
+  opacity: 0.8;
+}
+
+/* Glass Body Sections */
+.glass-body {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.glass-section {
+  background: rgba(255, 255, 255, 0.45);
+  padding: 15px 18px;
+  border-radius: 12px;
+  border-left: 4px solid #28a745;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.glass-section h3 {
+  color: #1b5e20;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.glass-section p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+#ngoNeeds {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+#ngoNeeds li {
+  background: rgba(40, 167, 69, 0.15);
+  border: 1px solid rgba(40, 167, 69, 0.4);
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 13px;
+  color: #155724;
+}
+
+/* ✨ Pop Animation on Hover */
+.glass-section {
+  background: rgba(255, 255, 255, 0.45);
+  padding: 15px 18px;
+  border-radius: 12px;
+  border-left: 4px solid #28a745;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+  transform: scale(1);
+}
+
+.glass-section:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.25);
+  background: rgba(255, 255, 255, 0.55);
+}
+
+/* ---------- DONATION FORM (RIGHT SIDE) ---------- */
+.donation-form-section {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  padding: 35px 40px;
+  animation: fadeSlideIn 0.9s ease forwards;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.donation-form-section h2 {
+  color: #28a745;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.donation-form-section p {
+  font-size: 14px;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #222;
+  display: block;
+  margin-bottom: 6px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #28a745;
+  outline: none;
+  box-shadow: 0 0 6px rgba(40, 167, 69, 0.2);
+}
+
+textarea {
+  resize: none;
+}
+
+.form-actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.submit-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #218838;
+}
+
+#formStatus {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #1b5e20;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1000px) {
+  .ngo-desc-container {
+    grid-template-columns: 1fr;
+    padding: 30px 25px;
+  }
+
+  .ngo-glass-card,
+  .donation-form-section {
+    width: 100%;
+  }
+
+  .glass-header img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .donation-form-section {
+    padding: 25px;
+  }
+
+  .ngo-desc-container {
+    gap: 25px;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+}
+.back-btn {
+  display: inline-block;
+  margin: 20px;
+  color: #28a745;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.back-btn:hover {
+  text-decoration: underline;
+}

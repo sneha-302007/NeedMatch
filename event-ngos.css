@@ -1,0 +1,139 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f5f8f5;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+.ngo-container {
+  text-align: center;
+  padding: 60px 40px;
+}
+
+h1 {
+  color: #14843c;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.ngo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  justify-content: center;
+}
+
+.ngo-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.2s;
+}
+
+.ngo-card:hover {
+  transform: translateY(-5px);
+}
+
+.ngo-card h3 {
+  color: #14843c;
+}
+
+.donate-btn {
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+  display: block;
+  margin-top: 10px;
+}
+
+.donate-btn:hover {
+  background-color: #0b5ed7;
+}
+
+/* Popup form */
+.form-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.hidden {
+  display: none;
+}
+
+.form-box {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: 350px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.form-box h2 {
+  text-align: center;
+  color: #14843c;
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+form input, form select, form textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+}
+
+.submit-btn {
+  background-color: #14843c;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.close-btn {
+  background-color: #d9534f;
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.footer {
+  background-color: #14843c;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}

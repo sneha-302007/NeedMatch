@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeedMatch - Donation Form</title>
+  <link rel="stylesheet" href="css/donation-form.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-container">
+      <h1 class="logo">Need<span>Match</span></h1>
+      <nav class="nav">
+        <a href="#">About Us</a>
+        <a href="#">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN FORM SECTION -->
+  <main class="main">
+    <section class="form-card">
+      <h2>Donation Form</h2>
+      <p>Please fill in your details to send your donation request to the NGO.</p>
+
+      <form action="#" method="POST" enctype="multipart/form-data" class="donation-form">
+        <div class="form-group">
+          <label for="ngoName">NGO Name</label>
+          <input type="text" id="ngoName" name="ngoName" value="Sunshine Orphanage" readonly>
+        </div>
+
+        <div class="form-group">
+          <label for="donorName">Donor Name</label>
+          <input type="text" id="donorName" name="donorName" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email ID</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="phone" id="phone" name="phone" placeholder="Enter your phone number" required>
+        </div>
+
+        <div class="form-group">
+          <label for="donationType">Donation Type</label>
+          <select id="donationType" name="donationType" required>
+            <option value="">-- Select Donation Type --</option>
+            <option value="clothes">Clothes</option>
+            <option value="books">Books</option>
+            <option value="groceries">Groceries</option>
+            <option value="money">Money</option>
+            <option value="others">Others</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="donationPhoto">Upload Donation Photo</label>
+          <input type="file" id="donationPhoto" name="donationPhoto" accept="image/*">
+        </div>
+
+        <div class="form-group">
+          <label for="address">Address</label>
+          <textarea id="address" name="address" rows="3" placeholder="Enter your address" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message (Optional)</label>
+          <textarea id="message" name="message" rows="3" placeholder="Write a short message for the NGO"></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="submit-btn">Submit Donation</button>
+          <a href="ngo.html" class="cancel-btn">Cancel</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>NeedMatch</h4>
+        <p>Connecting donors with trusted NGOs across India. Transparent, impactful, and secure donations that truly matter.</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">NGOs</a></li>
+          <li><a href="#">Donate Now</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <p>Email: support@needmatch.org</p>
+        <p>Phone: +91 98765 43210</p>
+        <p>Location: Mumbai, India</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 NeedMatch. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NGO Profile | NeedMatch</title>
+  <link rel="stylesheet" href="css/ngo-profile.css" />
+</head>
+
+<body>
+  <div id="header-placeholder"></div>
+
+
+  <main class="profile-grid">
+    <!-- LEFT CARD -->
+    <section class="card left-card">
+      <h2>Basic Information</h2>
+
+      <label>NGO Name</label>
+      <input type="text" id="ngoName" placeholder="e.g. Sunrise Orphanage" required>
+
+      <label>Type of NGO</label>
+      <select id="ngoType" required>
+        <option value="">-- Select Type --</option>
+        <option value="Orphanage">Orphanage</option>
+        <option value="Old Age Home">Old Age Home</option>
+        <option value="Home for Special Children">Home for Special Children</option>
+        <option value="Home for Disabled Persons">Home for Disabled Persons</option>
+      </select>
+
+      <label>Contact Number</label>
+      <input type="tel" id="contact" placeholder="+91 98765 43210" required>
+
+      <label>Email Address</label>
+      <input type="email" id="email" placeholder="example@ngo.org" required>
+
+      <label>Address / Location</label>
+      <input type="text" id="address" placeholder="e.g. Pune, Maharashtra" required>
+    </section>
+
+    <!-- RIGHT CARD -->
+    <section class="card right-card">
+      <h2>Additional Details</h2>
+
+      <label>Requirements / Needs</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="needs" value="Books"> Books</label>
+        <label><input type="checkbox" name="needs" value="Clothes"> Clothes</label>
+        <label><input type="checkbox" name="needs" value="Groceries"> Groceries</label>
+        <label><input type="checkbox" id="otherCheckbox"> Other</label>
+        <input type="text" id="otherNeed" placeholder="Enter custom need" style="display:none;">
+      </div>
+
+      <label>Established Year</label>
+      <input type="number" id="establishedYear" placeholder="e.g. 2010" required>
+
+      <label>About Your NGO</label>
+      <textarea id="description" rows="4" placeholder="Tell people about your mission..." required></textarea>
+
+      <label>Upload Images</label>
+      <input type="file" id="mediaUpload" accept="image/*" multiple>
+      <div id="previewContainer"></div>
+
+      <button type="submit" id="saveBtn">Save Information</button>
+      <p id="statusMsg"></p>
+    </section>
+  </main>
+<div id="footer-placeholder"></div>
+  <script>
+    // Toggle "Other" input
+    document.addEventListener("DOMContentLoaded", () => {
+      const otherCheckbox = document.getElementById("otherCheckbox");
+      const otherNeed = document.getElementById("otherNeed");
+      otherCheckbox.addEventListener("change", () => {
+        otherNeed.style.display = otherCheckbox.checked ? "block" : "none";
+      });
+    });
+  </script>
+
+   <script>
+    // 🔹 This script will load the header.html file into the div above
+    async function loadHeader() {
+      const response = await fetch("header.html");
+      const content = await response.text();
+      document.getElementById("header-placeholder").innerHTML = content;
+    }
+    loadHeader();
+     // 🔹 This script will load the header.html file into the div above
+    async function loadFooter() {
+      const response = await fetch("footer.html");
+      const content = await response.text();
+      document.getElementById("footer-placeholder").innerHTML = content;
+    }
+    loadFooter();
+  </script>
+  <script type="module" src="js/edit_profile.js" defer ></script>
+</body>
+</html>
